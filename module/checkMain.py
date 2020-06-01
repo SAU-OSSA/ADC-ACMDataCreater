@@ -6,9 +6,7 @@ import module.parameters
 #编译运行代码
 def RunCode(
     #代码路径
-    cppCode = ".\\code\\main.cpp",
-    #编译器
-    translater = "g++",
+    Code = ".\\code\\main.cpp",
     #缓存路径
     tmpPath = ".\\code\\debug\\",
     #数据路径
@@ -20,17 +18,28 @@ def RunCode(
     model = "out",
 ):
 
-    #执行编译
-    os.system("%s %s -o %stest%s"%(translater,cppCode,tmpPath,model))
-    
-    #运行程序
-    for i in range(1,dataNum+1):
-        subprocess.call(
-            "%stest%s.exe"%(tmpPath,model),
-            stdin=open("%s%d.in"%(inpPath,i),"r"),
-            stdout=open("%s%d.%s"%(oupPath,i,model),"w"),
-            shell=True,
-        )
+    #C++
+    if(Code[-4:]=='.cpp'):
+        #执行编译
+        os.system("g++ %s -o %stest%s"%(Code,tmpPath,model))
+        
+        #运行程序
+        for i in range(1,dataNum+1):
+            subprocess.call(
+                "%stest%s.exe"%(tmpPath,model),
+                stdin=open("%s%d.in"%(inpPath,i),"r"),
+                stdout=open("%s%d.%s"%(oupPath,i,model),"w"),
+                shell=True,
+            )
+    elif(Code[-3:]=='.py'):
+        #直接运行代码
+        for i in range(1,dataNum+1):
+            subprocess.call(
+                'python '+Code,
+                stdin=open("%s%d.in"%(inpPath,i),"r"),
+                stdout=open("%s%d.%s"%(oupPath,i,model),"w"),
+                shell=True,
+            )
 
 
 #对输出结果比较

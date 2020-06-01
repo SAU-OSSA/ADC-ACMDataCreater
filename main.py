@@ -1,5 +1,5 @@
-import module.createDate
-import module.checkMain
+import module.createDate as createDate
+import module.checkMain as checkMain
 import argparse
 import os
 
