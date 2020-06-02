@@ -1,3 +1,5 @@
 code/
 data/
 log.check
+__pycache__/
+module/__pycache__/
