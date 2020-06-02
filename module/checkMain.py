@@ -1,21 +1,24 @@
 import os
 import subprocess
 import module.parameters
+import module.defineClass
+defaultPara = module.defineClass.val("defaultPara")
+
 #对拍部分，首先编译两个代码然后运行exe再比较结果
 
 #编译运行代码
 def RunCode(
     #代码路径
-    Code = ".\\code\\main.cpp",
+    Code =  defaultPara.Code,
     #缓存路径
-    tmpPath = ".\\code\\debug\\",
+    tmpPath = defaultPara.TmpPath,
     #数据路径
-    inpPath = ".\\data\\in\\",
-    oupPath = ".\\data\\out\\",
+    inpPath = defaultPara.InpPath,
+    oupPath = defaultPara.OupPath,
     #数据个数
-    dataNum = 10, 
+    dataNum = defaultPara.DataNum, 
     #模式
-    model = "out",
+    model = defaultPara.OupModel,
 ):
 
     #C++
@@ -45,13 +48,13 @@ def RunCode(
 #对输出结果比较
 def CheckAns(
     #数据路径
-    oupPath = ".\\data\\out\\",
-    checkPath = ".\\data\\check\\",
+    oupPath = defaultPara.OupPath,
+    checkPath = defaultPara.CheckPath,
     #数据个数
-    dataNum = 10,
+    dataNum = defaultPara.DataNum,
     #数据格式
-    oupModel = "out",
-    checkModel = "check",
+    oupModel = defaultPara.OupModel,
+    checkModel = defaultPara.Check2Model,
 ):  
 
     checkLog = open("log.check","wb",buffering=0)

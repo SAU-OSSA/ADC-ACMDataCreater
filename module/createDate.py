@@ -1,4 +1,5 @@
 import module.parameters
+import module.defineClass
 import random
 import sys
 #根据给定数据格式创建数据文件

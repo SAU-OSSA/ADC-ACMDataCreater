@@ -2,7 +2,7 @@
 
 用于算法竞赛选手代码对拍或大量随机数据生成，目前仅支持 C++ 和 Python 代码。
 
-
+<br>
 
 ## 文档目录
 
@@ -13,29 +13,29 @@
 *   [使用说明](#使用说明)
 *   [开源协议](#开源协议)
 
-
+<br>
 
 ## 快速开始
 
-##### 运行环境
+#### 运行环境
 
 *   python 3.6+
 *   g++ 6.3.0+
 
-##### 克隆代码库
+#### 克隆代码库
 
 ```cmd
 git clone git@github.com:SAU-OSSA/ADC-ACMDateCreater.git
 ```
 
-##### 安装运行库
+#### 安装运行库
 
 ```cmd
 pip install argparse
 pip install subprocess
 ```
 
-
+<br>
 
 ## 使用说明
 
@@ -43,9 +43,9 @@ pip install subprocess
 
 除此之外共有4种运行模式。
 
+<br>
 
-
-##### 以随机数据和给定标程生成输出
+#### 以随机数据和给定标程生成输出
 
 ```cmd
 ./main.py -m 0 -p1 标程位置
@@ -59,9 +59,9 @@ pip install subprocess
 
 >   *参数 `p1` 可以省略，将采用默认位置 `./code/main.cpp`
 
+<br>
 
-
-##### 以现有数据和给定标程生成输出
+#### 以现有数据和给定标程生成输出
 
 ```cmd
 ./main.py -m 1 -p1 标程位置
@@ -73,9 +73,9 @@ pip install subprocess
 
 >   *参数 `p1` 可以省略，将采用默认位置 `./code/main.cpp`
 
+<br>
 
-
-##### 以给定标程输入输出和现有程序对拍
+#### 以给定标程输入输出和现有程序对拍
 
 ```cmd
 ./main.py -m 2 -p2 测试程序位置
@@ -89,9 +89,9 @@ pip install subprocess
 
 >   *参数 `p2` 可以省略，将采用默认位置 `./code/check2.cpp`
 
+<br>
 
-
-##### 对拍两个测试程序
+#### 对拍两个测试程序
 
 ```cmd
 ./main.py -m 3 -p1 测试程序1位置 -p2 测试程序2位置
@@ -107,11 +107,11 @@ pip install subprocess
 >
 >   *参数 `p2` 可以省略，将采用默认位置 `./code/check2.cpp`
 
+<br>
 
+>   **上述所有运行模式，对于不同语言的代码，程序会自动选取合适的运行方式**
 
->   **上述所有运行模式，对于不同语言，程序会自动选取合适的运行方式**
-
-
+<br>
 
 ## 开源协议
 
