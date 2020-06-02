@@ -25,7 +25,7 @@
 #### 克隆代码库
 
 ```cmd
-git clone git@github.com:SAU-OSSA/ADC-ACMDateCreater.git
+git clone git@github.com:SAU-OSSA/ADC-ACMDataCreater.git
 ```
 
 #### 安装运行库
