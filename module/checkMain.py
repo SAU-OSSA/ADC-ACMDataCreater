@@ -64,8 +64,8 @@ def CheckAns(
         can = True
         for line1,line2 in zip(open("%s%d.%s"%(oupPath,j,oupModel),"r"),open("%s%d.%s"%(checkPath,j,checkModel),"r")):
             if(line1!=line2):
-                print("第%d组，第%d行发现错误[wa]： outAns=%s  checkAns=%s ，checkLog has saved."%(i,j,line1,line2))
-                checkLog.write(("第%d组，第%d行发现错误[wa]： outAns=%s  checkAns=%s ，checkLog has saved.\n"%(i,j,line1,line2)).encode("UTF-8"))
+                print("第%d组，第%d行发现错误[wa]：\n outAns=%s checkAns=%s ,checkLog has saved."%(i,j,line1,line2))
+                checkLog.write(("第%d组，第%d行发现错误[wa]：\n outAns=%s checkAns=%s ,checkLog has saved.\n"%(i,j,line1,line2)).encode("UTF-8"))
                 can = False
                 break
         if(can):
