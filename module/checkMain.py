@@ -62,12 +62,13 @@ def CheckAns(
     for i in range(1,dataNum+1):
         j = 1
         can = True
-        for line1,line2 in zip(open("%s%d.%s"%(oupPath,j,oupModel),"r"),open("%s%d.%s"%(checkPath,j,checkModel),"r")):
+        for line1,line2 in zip(open("%s%d.%s"%(oupPath,i,oupModel),"r"),open("%s%d.%s"%(checkPath,i,checkModel),"r")):
             if(line1!=line2):
-                print("第%d组，第%d行发现错误[wa]：\n outAns=%s checkAns=%s ,checkLog has saved."%(i,j,line1,line2))
+                print("第%d组，第%d行发现错误[wa]：\n outAns=\t%s checkAns=\t%s ,checkLog has saved."%(i,j,line1,line2))
                 checkLog.write(("第%d组，第%d行发现错误[wa]：\n outAns=%s checkAns=%s ,checkLog has saved.\n"%(i,j,line1,line2)).encode("UTF-8"))
                 can = False
                 break
+            j+=1;
         if(can):
             print("第%d组，未发现错误[ac]：checkLog has saved."%(i))
             checkLog.write(("第%d组，未发现错误[ac]：checkLog has saved.\n"%(i)).encode("UTF-8"))
