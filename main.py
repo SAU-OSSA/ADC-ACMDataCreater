@@ -16,14 +16,14 @@ def Mkdir(path):
 
 
 Mkdir("./data/check")
-Mkdir("./data/in")
-Mkdir("./data/out")
+Mkdir("./data/testData")
+#Mkdir("./data/out")
 Mkdir("./code/debug")
 
 Main = argparse.ArgumentParser(description="数据生成&对拍器")
 Main.add_argument(
     '-m', '--model',
-    help='应用启动模式\t0以原数据为标程数据生成,\t1新随机数据为标程数据生成,\t2用标准数据为程序对拍,\t3为重新计算标准数据并对拍',
+    help='应用启动模式\t0新随机数据为标程数据生成,\t1以原数据为标程数据生成,\t2用标准数据为程序对拍,\t3为重新计算标准数据并对拍',
     type=int,
     choices=[0, 1, 2, 3],
 )

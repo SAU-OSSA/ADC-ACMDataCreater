@@ -9,11 +9,11 @@ class defaultPara(object):
         self.Check2Code = ".\\code\\check2.cpp"
 
         self.TmpPath = ".\\code\\debug\\"
-        self.InpPath = ".\\data\\in\\"
-        self.OupPath = ".\\data\\out\\"
+        self.InpPath = ".\\data\\testData\\"
+        self.OupPath = ".\\data\\testData\\"
         self.CheckPath = ".\\data\\check\\"
 
-        self.DataNum = 10
+        self.DataNum = 40
 
         self.OupModel = "out"
         self.Check1Model = "check1"
